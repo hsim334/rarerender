@@ -17,161 +17,7 @@
             href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;700;900&display=swap"
             rel="stylesheet">
     </noscript>
-    <style>
-        /* CRITICAL CSS SHELL */
-        :root {
-            --bg-main: #060606;
-            --accent: #10B981;
-            --text-primary: #FFFFFF;
-            --text-secondary: #A1A1A6;
-            --container-max: 1100px;
-            --section-gap: 140px;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-main);
-            color: var(--text-primary);
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .container {
-            max-width: var(--container-max);
-            margin: 0 auto;
-            padding-left: 40px;
-            padding-right: 40px;
-        }
-
-        nav {
-            padding: 24px 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-        }
-
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-weight: 900;
-            letter-spacing: 0.2em;
-            font-size: 15px;
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .hero-section {
-            text-align: center;
-            padding-top: 200px;
-        }
-
-        h1 {
-            font-size: clamp(56px, 9vw, 110px);
-            font-weight: 700;
-            line-height: 1;
-            letter-spacing: -0.05em;
-            margin-bottom: 48px;
-        }
-
-        .label-caps {
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--accent);
-            margin-bottom: 24px;
-            display: block;
-            letter-spacing: 0.02em;
-        }
-
-        .btn-premium {
-            display: inline-flex;
-            align-items: center;
-            padding: 22px 64px;
-            background: var(--accent);
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 100px;
-            font-size: 17px;
-        }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            padding: 18px 48px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 100px;
-            font-size: 15px;
-            margin-left: 16px;
-        }
-
-        .surgical-slider {
-            position: relative;
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1.5 / 1;
-            border-radius: 40px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            background: linear-gradient(135deg, #0f0f11 0%, #1a1a1e 100%);
-        }
-
-        @media (max-width: 1024px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero-section {
-                padding-top: 140px;
-            }
-
-            h1 {
-                font-size: 48px;
-            }
-
-            .hero-btns {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-            }
-
-            .btn-secondary {
-                margin-left: 0;
-            }
-        }
-    </style>
-    <link rel="preload" href="style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="style.min.css">
-    </noscript>
+    <link rel="stylesheet" href="style.min.css">
     <!-- Open Graph / SEO -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Rare Render | Realistic Virtual Staging">
@@ -240,17 +86,17 @@
                 style="margin-top: 120px; max-width: 900px; margin-left: auto; margin-right: auto;">
                 <div class="surgical-slider" style="height: auto; aspect-ratio: 1.5 / 1; border-radius: 20px;">
                     <div class="slider-overlay" id="slider-before-wrap">
-                        <img data-src="images/hero-before.webp"
+                        <img src="images/hero-before.webp"
                             srcset="images/hero-before-400w.webp 400w, images/hero-before-800w.webp 800w, images/hero-before.webp 1024w"
                             sizes="(max-width: 768px) 100vw, 1024px" alt="Empty Bedroom Before Staging" width="1024"
-                            height="682" loading="eager" fetchpriority="low" decoding="async"
+                            height="682" loading="eager" fetchpriority="high"
                             style="object-fit: cover; background: #000;">
                     </div>
-                    <img data-src="images/hero-after.webp"
+                    <img src="images/hero-after.webp"
                         srcset="images/hero-after-400w.webp 400w, images/hero-after-800w.webp 800w, images/hero-after.webp 1024w"
                         sizes="(max-width: 768px) 100vw, 1024px" alt="Virtually Staged Master Bedroom"
                         class="slider-after" width="1024" height="686" style="object-fit: cover; background: #000;"
-                        loading="eager" fetchpriority="low" decoding="async">
+                        loading="eager" fetchpriority="high">
                     <div class="slider-line" id="slider-line">
                         <div class="slider-btn">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -533,21 +379,6 @@
             menu.classList.toggle('active');
             document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
         }
-    </script>
-    <script>
-        (function () {
-            // Wait for at least one paint to ensure FCP is hit immediately
-            requestAnimationFrame(function () {
-                requestAnimationFrame(function () {
-                    // 1) Swap hero images to trigger loading
-                    var imgs = document.querySelectorAll('img[data-src]');
-                    for (var i = 0; i < imgs.length; i++) {
-                        imgs[i].src = imgs[i].getAttribute('data-src');
-                        imgs[i].removeAttribute('data-src');
-                    }
-                });
-            });
-        })();
     </script>
 </body>
 
