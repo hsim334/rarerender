@@ -7,7 +7,7 @@
     --border-glass: rgba(255, 255, 255, 0.08);
     --text-primary: #FFFFFF;
     --text-secondary: #A1A1A6;
-    --text-muted: #555555;
+    --text-muted: #888888;
     --accent: #10B981;
     --accent-glow: rgba(16, 185, 129, 0.1);
     --font-serif: 'Playfair Display', serif;
@@ -22,6 +22,11 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 body {
@@ -441,7 +446,9 @@ nav.scrolled {
 
 /* Mobile Optimization */
 @media (max-width: 1024px) {
-    --section-gap: 140px;
+    :root {
+        --section-gap: 140px;
+    }
 
     .pillar-grid,
     .evidence-grid {
