@@ -22,6 +22,8 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 img {
@@ -447,7 +449,7 @@ nav.scrolled {
 /* Mobile Optimization */
 @media (max-width: 1024px) {
     :root {
-        --section-gap: 140px;
+        --section-gap: 80px;
     }
 
     .pillar-grid,
@@ -626,4 +628,132 @@ nav.scrolled {
         margin-left: auto;
         margin-right: auto;
     }
+
+    /* Container Spacing */
+    .container {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    /* Hero Overrides */
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+        /* Prevent them from getting weirdly wide on tablets */
+        margin-left: auto;
+        margin-right: auto;
+        gap: 16px !important;
+    }
+
+    .hero-btns a {
+        width: 100%;
+        justify-content: center;
+        padding: 18px 24px;
+        /* Slightly tighter padding for mobile */
+    }
+
+    /* Mobile Grid Overrides */
+    .col-span-7,
+    .col-span-5,
+    .col-offset-right,
+    .col-span-6,
+    .col-span-12 {
+        grid-column: 1 / -1 !important;
+        margin-top: 40px !important;
+    }
+
+    .evidence-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-section {
+        padding-top: 140px !important;
+    }
+
+    /* Mobile Nav */
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: flex !important;
+    }
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 3001;
+    position: relative;
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 3000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-menu-overlay a {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Utility Classes */
+.hero-section {
+    text-align: center;
+    padding-top: 200px;
+}
+
+.col-span-7 {
+    grid-column: span 7;
+}
+
+.col-span-5 {
+    grid-column: span 5;
+}
+
+.col-offset-right {
+    grid-column: 5 / span 8;
+    margin-top: 40px;
+}
+
+.col-span-6 {
+    grid-column: span 6;
+    margin-top: 40px;
+}
+
+.col-span-12 {
+    grid-column: span 12;
+    margin-top: 100px;
+    text-align: center;
 }
