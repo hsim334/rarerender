@@ -91,6 +91,7 @@ h1 {
     text-align: center;
     background: linear-gradient(to bottom, #fff 40%, rgba(255, 255, 255, 0.5));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     /* Subtle gradient text for depth */
 }
@@ -737,32 +738,102 @@ nav.scrolled {
 }
 
 
-/* Utility Classes */
-.hero-section {
+/* Landing Page Specific Components */
+.hero-subheadline {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: clamp(20px, 4vw, 24px);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-weight: 400;
     text-align: center;
-    padding-top: 200px;
 }
 
-.col-span-7 {
-    grid-column: span 7;
+.problem-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    display: grid;
+    gap: 20px;
 }
 
-.col-span-5 {
-    grid-column: span 5;
+.problem-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: clamp(18px, 3vw, 22px);
+    color: var(--text-secondary);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    transition: all 0.3s ease;
 }
 
-.col-offset-right {
-    grid-column: 5 / span 8;
-    margin-top: 40px;
+.problem-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(16, 185, 129, 0.2);
+    transform: translateX(10px);
 }
 
-.col-span-6 {
-    grid-column: span 6;
-    margin-top: 40px;
+.problem-icon {
+    color: var(--accent);
+    flex-shrink: 0;
 }
 
+.simplicity-block {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(6, 6, 6, 0) 100%);
+    border-top: 1px solid var(--border-glass);
+    border-bottom: 1px solid var(--border-glass);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.simplicity-block::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.risk-relief-section {
+    text-align: center;
+    padding: 160px 40px;
+    border-top: 1px solid var(--border-glass);
+}
+
+.risk-relief-title {
+    font-size: clamp(32px, 5vw, 64px);
+    margin-bottom: 32px;
+}
+
+.risk-relief-text {
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 64px;
+    font-size: clamp(18px, 3vw, 24px);
+    line-height: 1.6;
+}
+
+/* Update Utility Classes if needed */
 .col-span-12 {
     grid-column: span 12;
-    margin-top: 100px;
+    margin-top: 60px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .simplicity-block {
+        padding: 80px 0;
+    }
+
+    .problem-item {
+        padding: 16px;
+    }
 }
