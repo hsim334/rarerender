@@ -908,16 +908,18 @@ nav.scrolled {
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     z-index: 4000;
     display: none;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 24px;
     opacity: 0;
     transition: opacity 0.4s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .modal-overlay.active {
@@ -1042,12 +1044,30 @@ nav.scrolled {
     font-style: italic;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .modal-content {
-        padding: 40px 24px;
+        padding: 48px 24px 32px;
+        border-radius: 24px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .modal-close {
+        top: 16px;
+        right: 16px;
     }
 
     .radio-group {
         grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .btn-premium {
+        padding: 18px 32px;
+        font-size: 16px;
+    }
+
+    .modal-content h2 {
+        font-size: 26px !important;
     }
 }
