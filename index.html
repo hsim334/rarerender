@@ -38,7 +38,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -66,12 +66,11 @@
         <div class="container nav-content">
             <a href="index.html" class="logo">RARE RENDER</a>
             <div class="nav-links">
-                <a href="proof.html">Portfolio</a>
                 <a href="how-it-works.html">Process</a>
                 <a href="design-styles.html">Styles</a>
                 <a href="frequently-asked.html">FAQ</a>
                 <a href="agent-partnership.html">Partnerships</a>
-                <a href="mailto:hello@rarerender.com">Contact</a>
+                <a href="#" class="open-modal" style="color: var(--accent);">Get Examples + Pricing</a>
             </div>
             <button class="mobile-menu-btn" aria-label="Menu" onclick="toggleMenu()">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -84,12 +83,11 @@
     </nav>
 
     <div class="mobile-menu-overlay" id="mobileMenu">
-        <a href="proof.html" onclick="toggleMenu()">Portfolio</a>
         <a href="how-it-works.html" onclick="toggleMenu()">Process</a>
         <a href="design-styles.html" onclick="toggleMenu()">Styles</a>
         <a href="frequently-asked.html" onclick="toggleMenu()">FAQ</a>
         <a href="agent-partnership.html" onclick="toggleMenu()">Partnerships</a>
-        <a href="mailto:hello@rarerender.com" onclick="toggleMenu()" style="color: var(--accent);">Contact Us</a>
+        <a href="#" class="open-modal" onclick="toggleMenu()" style="color: var(--accent);">Get Examples + Pricing</a>
     </div>
 
     <main>
@@ -103,10 +101,12 @@
                         style="color: #fff; font-weight: 500;">fast, simple, and real-looking.</span>
                 </h2>
                 <div class="hero-btns">
-                    <a href="mailto:hello@rarerender.com?subject=Virtual Staging Request" class="btn-premium">
-                        Fix This Flat Listing
+                    <a href="#" class="btn-premium open-modal">
+                        Get Examples + Pricing
                     </a>
-                    <a href="proof.html" class="btn-secondary">See 30+ Examples</a>
+                </div>
+                <div style="margin-top: 24px; font-size: 14px; color: var(--text-muted);">
+                    No sales call — just examples + pricing.
                 </div>
             </div>
 
@@ -301,8 +301,9 @@
                         <span style="color: #fff; font-weight: 600;">Simply elite quality delivered fast.</span>
                     </p>
                     <div style="margin-top: 48px;">
-                        <a href="mailto:hello@rarerender.com?subject=Virtual Staging Request" class="btn-premium">Make
-                            This Pop Online</a>
+                        <a href="#" class="btn-premium open-modal">Get Examples + Pricing</a>
+                        <p style="margin-top: 16px; font-size: 13px; color: var(--text-muted);">No obligation • No sales
+                            call</p>
                     </div>
                 </div>
             </div>
@@ -329,8 +330,9 @@
                             <li>Unlimited Revisions</li>
                             <li>High-Res Final File</li>
                         </ul>
-                        <a href="mailto:hello@rarerender.com?subject=Single Shot Staging" class="btn-premium"
-                            style="width: 100%; justify-content: center; padding: 18px 0;">Order Now</a>
+                        <a href="#" class="btn-premium open-modal"
+                            style="width: 100%; justify-content: center; padding: 18px 0; background: transparent; border: 1px solid var(--border-glass);">Get
+                            Examples + Pricing</a>
                     </article>
 
                     <article class="pricing-card featured">
@@ -344,8 +346,8 @@
                             <li>Dedicated Support</li>
                             <li>Consistent Home Style</li>
                         </ul>
-                        <a href="mailto:hello@rarerender.com?subject=Pro Pack Staging (5 Shots)" class="btn-premium"
-                            style="width: 100%; justify-content: center; padding: 18px 0;">Best Value</a>
+                        <a href="#" class="btn-premium open-modal"
+                            style="width: 100%; justify-content: center; padding: 18px 0;">Get Examples + Pricing</a>
                     </article>
 
                     <article class="pricing-card">
@@ -359,9 +361,9 @@
                             <li>Retainer Priority</li>
                             <li>Billing via Invoice</li>
                         </ul>
-                        <a href="mailto:hello@rarerender.com?subject=Custom Package Inquiry" class="btn-premium"
-                            style="width: 100%; justify-content: center; padding: 18px 0; background: transparent; border: 1px solid var(--border-glass);">Email
-                            Us Now</a>
+                        <a href="#" class="btn-premium open-modal"
+                            style="width: 100%; justify-content: center; padding: 18px 0; background: transparent; border: 1px solid var(--border-glass);">Get
+                            Examples + Pricing</a>
                     </article>
                 </div>
             </div>
@@ -376,8 +378,9 @@
                 <p class="risk-relief-text">
                     Just want to look proactive? Try one — if it feels flat, we’ll redo it. No risk.
                 </p>
-                <a href="mailto:hello@rarerender.com?subject=Virtual Staging Request" class="btn-premium">Send My Photos
-                    – Get It Back Tomorrow</a>
+                <a href="#" class="btn-premium open-modal">Get Examples + Pricing</a>
+                <p style="margin-top: 16px; font-size: 13px; color: var(--text-muted);">No sales call — just examples +
+                    pricing.</p>
             </div>
         </section>
     </main>
@@ -390,9 +393,8 @@
                     modern real estate agents. High-fidelity results in 24 hours.</p>
             </div>
             <div class="footer-column">
-                <h3>Portfolio</h3>
                 <ul>
-                    <li><a href="proof.html">Full Gallery</a></li>
+                    <li><a href="#" class="open-modal">Get Examples + Pricing</a></li>
                     <li><a href="design-styles.html">Design Styles</a></li>
                 </ul>
             </div>
@@ -401,7 +403,7 @@
                 <ul>
                     <li><a href="staging-living-rooms.html">Living Room Staging</a></li>
                     <li><a href="staging-bedrooms.html">Bedroom Staging</a></li>
-                    <li><a href="proof.html">Bathroom & Outdoor</a></li>
+                    <li><a href="#" class="open-modal">Bathroom & Outdoor</a></li>
                     <li><a href="design-styles.html">Design Styles</a></li>
                     <li><a href="agent-partnership.html">Commercial & Custom</a></li>
                 </ul>
@@ -424,14 +426,62 @@
     <!-- Sticky Contact Bar -->
     <div class="sticky-contact-bar">
 
-        <a href="mailto:hello@rarerender.com?subject=Virtual Staging Inquiry" class="btn-email">
+        <a href="#" class="btn-email open-modal">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
-            Email
+            Get Examples + Pricing
         </a>
+    </div>
+
+    <!-- Micro-commitment Modal -->
+    <div class="modal-overlay" id="leadModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div style="text-align: center; margin-bottom: 32px;">
+                <h2 style="font-size: 32px; margin-bottom: 12px;">Get Examples + Pricing</h2>
+                <p style="color: var(--text-secondary);">See examples + pricing instantly.</p>
+            </div>
+            <form class="micro-form" id="leadForm" action="https://formspree.io/f/xnjjyzpy" method="POST">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" name="name" class="form-control" placeholder="Jane" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" class="form-control" placeholder="0412 345 678" required>
+                </div>
+                <div class="form-group">
+                    <label>Do you have a vacant listing?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="listing" id="listing-yes" value="yes">
+                            <label for="listing-yes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="listing" id="listing-coming" value="coming">
+                            <label for="listing-coming">One coming up</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="listing" id="listing-browsing" value="browsing" checked>
+                            <label for="listing-browsing">Just browsing</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn-premium"
+                    style="width: 100%; justify-content: center; margin-top: 12px;">Get Examples + Pricing</button>
+                <div class="form-reassurance">
+                    Fast access — no sales call required.
+                </div>
+            </form>
+        </div>
     </div>
 
     <!-- Script Engine -->
