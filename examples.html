@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Examples + Pricing | Rare Render</title>
+    <title>Virtual Staging Examples & Pricing | Rare Render Examples</title>
+    <meta name="description"
+        content="Explore our portfolio of high-fidelity virtual staging. See before and after examples of living rooms, bedrooms, and outdoor spaces. Elite quality delivered in 24 hours.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,7 +104,7 @@
             font-style: italic;
         }
 
-        /* Portfolio Grid Styles */
+        /* Examples Grid Styles */
         .pinterest-grid {
             columns: 3 300px;
             column-gap: 20px;
@@ -223,18 +225,40 @@
             <div class="nav-links">
                 <a href="how-it-works.html">Process</a>
                 <a href="design-styles.html">Styles</a>
+                <a href="examples.html" class="active">Examples</a>
                 <a href="frequently-asked.html">FAQ</a>
                 <a href="agent-partnership.html">Partnerships</a>
+                <a href="#" class="open-modal" style="color: var(--accent);">Get Pricing</a>
             </div>
+            <button class="mobile-menu-btn" aria-label="Menu" onclick="toggleMenu()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
         </div>
+    </nav>
+
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <a href="how-it-works.html" onclick="toggleMenu()">Process</a>
+        <a href="design-styles.html" onclick="toggleMenu()">Styles</a>
+        <a href="examples.html" onclick="toggleMenu()" class="active">Examples</a>
+        <a href="frequently-asked.html" onclick="toggleMenu()">FAQ</a>
+        <a href="agent-partnership.html" onclick="toggleMenu()">Partnerships</a>
+        <a href="#" class="open-modal" onclick="toggleMenu()" style="color: var(--accent);">Get Pricing</a>
+    </div>
+    </div>
     </nav>
 
     <main>
         <div class="container thank-you-section">
-            <span class="label-caps">Access Granted</span>
-            <h1>Pricing + <span class="title-serif">Proof.</span></h1>
-            <p style="max-width: 600px; margin: 24px auto 0; font-size: 18px; color: var(--text-secondary);">
-                Everything you need to transform your next listing into a high-performance asset.
+            <span class="label-caps">Real Results</span>
+            <h1>The Evidence: Virtual <span class="title-serif">Staging Examples.</span></h1>
+            <p
+                style="max-width: 700px; margin: 24px auto 0; font-size: 18px; color: var(--text-secondary); line-height: 1.6;">
+                High-fidelity, photorealistic staging that transforms vacant properties into aspirational homes.
+                Explore our recent work across different styles and room types.
             </p>
 
             <!-- Gated Gallery -->
@@ -437,7 +461,8 @@
                     <h2 style="margin-bottom: 8px;">Ready to transform <span class="title-serif">your own
                             listing?</span></h2>
                     <p style="color: var(--text-secondary); font-size: 18px; max-width: 500px; margin: 0 auto;">
-                        Send your photos directly to our team via SMS or Email. No forms, no friction.
+                        Send your photos directly to our team via SMS or Email. No forms, no friction. Everything we've
+                        shown below is possible for your property.
                     </p>
 
                     <div style="display: flex; flex-direction: column; gap: 16px; align-items: center; width: 100%;">
@@ -484,7 +509,7 @@
             <div class="footer-column">
                 <h3>Get Started</h3>
                 <ul>
-                    <li><a href="#" class="open-modal">Get Examples + Pricing</a></li>
+                    <li><a href="#" class="open-modal">Get Pricing</a></li>
                     <li><a href="design-styles.html">Design Styles</a></li>
                 </ul>
             </div>
@@ -510,6 +535,18 @@
         </div>
     </footer>
 
+    <!-- Sticky Contact Bar -->
+    <div class="sticky-contact-bar">
+        <a href="#" class="btn-email open-modal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Get Pricing
+        </a>
+    </div>
+
     <!-- Micro-commitment Modal -->
     <div class="modal-overlay" id="leadModal">
         <div class="modal-content">
@@ -520,7 +557,8 @@
                 </svg>
             </button>
             <div style="text-align: center; margin-bottom: 32px;">
-                <h2 style="font-size: 32px; margin-bottom: 12px;">How to Sell Empty Listings 70% Faster Without Expensive Furniture, Long Wait Times, or Price Reductions.</h2>
+                <h2 style="font-size: 32px; margin-bottom: 12px;">How to Sell Empty Listings 70% Faster Without
+                    Expensive Furniture, Long Wait Times, or Price Reductions.</h2>
                 <p style="color: var(--text-secondary);">See examples + pricing instantly.</p>
             </div>
             <form class="micro-form" id="leadForm" action="https://formspree.io/f/xnjjyzpy" method="POST">
@@ -550,7 +588,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn-premium"
-                    style="width: 100%; justify-content: center; margin-top: 12px;">Get Examples + Pricing</button>
+                    style="width: 100%; justify-content: center; margin-top: 12px;">Get Pricing</button>
                 <div class="form-reassurance">
                     Fast access — no sales call required.
                 </div>
@@ -560,8 +598,16 @@
 
     <script src="interactions.js"></script>
     <script>
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => { if (window.scrollY > 40) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }, { passive: true });
         const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); }); }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+            document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+        }
     </script>
 </body>
 

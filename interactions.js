@@ -120,14 +120,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     await new Promise(resolve => setTimeout(resolve, 2500));
 
                     if (response.ok) {
-                        window.location.href = 'thank-you.html';
+                        window.location.href = 'examples.html';
                     } else {
                         // Fallback redirect
-                        window.location.href = 'thank-you.html';
+                        window.location.href = 'examples.html';
                     }
                 } catch (error) {
                     console.error('Error submitting form:', error);
-                    window.location.href = 'thank-you.html';
+                    window.location.href = 'examples.html';
                 }
             });
         }

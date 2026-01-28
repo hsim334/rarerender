@@ -59,12 +59,12 @@
             <a href="index.html" class="logo">RARE RENDER</a>
             <div class="nav-links">
 
-                <a href="proof.html" class="active">Portfolio</a>
+                <a href="examples.html" class="active">Examples</a>
                 <a href="how-it-works.html">Process</a>
                 <a href="design-styles.html">Styles</a>
                 <a href="frequently-asked.html">FAQ</a>
                 <a href="agent-partnership.html">Partnerships</a>
-                <a href="#" class="open-modal" style="color: var(--accent);">Get Examples + Pricing</a>
+                <a href="#" class="open-modal" style="color: var(--accent);">Get Pricing</a>
             </div>
         </div>
     </nav>
@@ -125,7 +125,7 @@
                     <span class="label-caps">Gallery</span>
                     <h2>More Bedroom <span class="title-serif">Transformations.</span></h2>
                 </div>
-                <a href="proof.html" class="btn-secondary reveal">View Full Portfolio</a>
+                <a href="examples.html" class="btn-secondary reveal">View Full Examples</a>
             </div>
             <div class="evidence-grid">
                 <div class="evidence-item reveal" style="grid-column: span 4;">
@@ -152,7 +152,7 @@
                     Empty bedrooms aren't memorable. Staged bedrooms are. Let's start your project today.
                 </p>
                 <div style="display: flex; flex-direction: column; gap: 24px; align-items: center;">
-                    <a href="#" class="btn-premium open-modal">Get Examples + Pricing</a>
+                    <a href="#" class="btn-premium open-modal">Get Pricing</a>
                     <p style="font-size: 14px; color: var(--text-muted);">No sales call — just examples + pricing.</p>
                 </div>
             </div>
@@ -167,9 +167,9 @@
                     modern real estate agents. High-fidelity results in 24 hours.</p>
             </div>
             <div class="footer-column">
-                <h3>Portfolio</h3>
+                <h3>Examples</h3>
                 <ul>
-                    <li><a href="proof.html">Full Gallery</a></li>
+                    <li><a href="examples.html">Full Gallery</a></li>
                     <li><a href="design-styles.html">Design Styles</a></li>
                 </ul>
             </div>
@@ -178,7 +178,7 @@
                 <ul>
                     <li><a href="staging-living-rooms.html">Living Room Staging</a></li>
                     <li><a href="staging-bedrooms.html">Bedroom Staging</a></li>
-                    <li><a href="proof.html">Bathroom & Outdoor</a></li>
+                    <li><a href="examples.html">Bathroom & Outdoor</a></li>
                     <li><a href="design-styles.html">Design Styles</a></li>
                     <li><a href="agent-partnership.html">Commercial & Custom</a></li>
                 </ul>
@@ -207,7 +207,7 @@
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
-            Get Examples + Pricing
+            Get Pricing
         </a>
     </div>
 
@@ -221,7 +221,8 @@
                 </svg>
             </button>
             <div style="text-align: center; margin-bottom: 32px;">
-                <h2 style="font-size: 32px; margin-bottom: 12px;">How to Sell Empty Listings 70% Faster Without Expensive Furniture, Long Wait Times, or Price Reductions.</h2>
+                <h2 style="font-size: 32px; margin-bottom: 12px;">How to Sell Empty Listings 70% Faster Without
+                    Expensive Furniture, Long Wait Times, or Price Reductions.</h2>
                 <p style="color: var(--text-secondary);">See examples + pricing instantly.</p>
             </div>
             <form class="micro-form" id="leadForm" action="https://formspree.io/f/xnjjyzpy" method="POST">
@@ -251,7 +252,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn-premium"
-                    style="width: 100%; justify-content: center; margin-top: 12px;">Get Examples + Pricing</button>
+                    style="width: 100%; justify-content: center; margin-top: 12px;">Get Pricing</button>
                 <div class="form-reassurance">
                     Fast access — no sales call required.
                 </div>
@@ -265,6 +266,12 @@
         window.addEventListener('scroll', () => { if (window.scrollY > 40) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }, { passive: true });
         const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); }); }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+            document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+        }
     </script>
 </body>
 
