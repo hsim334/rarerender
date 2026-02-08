@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rare Render | Elite Virtual Staging</title>
+    <meta name="description"
+        content="Professional virtual staging for real estate agents. Fast, realistic, and designed to sell.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #FFFFFF;
+            --bg-soft: #F9F9FB;
+            --fg: #1D1D1F;
+            --fg-muted: #86868B;
+            --rare-green: #059669;
+            --rare-green-vibrant: #10B981;
+            --rare-green-soft: rgba(5, 150, 105, 0.05);
+            --primary: #000000;
+            --border: #E5E5E7;
+            --radius-xl: 32px;
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --container: 1100px;
+            --font-sans: 'Inter', -apple-system, system-ui, sans-serif;
+
+            /* Design Depth */
+            --shadow-float: 0 30px 60px rgba(0, 0, 0, 0.1);
+            --shadow-subtle: 0 2px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--fg);
+            background-color: var(--bg);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* --- LOGO --- */
+        .logo-static {
+            margin-bottom: 64px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-static a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -0.04em;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            padding-top: 100px;
+            padding-bottom: 140px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: clamp(44px, 10vw, 100px);
+            font-weight: 900;
+            line-height: 0.95;
+            letter-spacing: -0.06em;
+            margin-bottom: 40px;
+            color: var(--primary);
+        }
+
+        .hero-subtitle {
+            font-size: 22px;
+            font-weight: 450;
+            color: var(--fg-muted);
+            max-width: 680px;
+            margin: 0 auto 80px;
+            line-height: 1.5;
+            letter-spacing: -0.02em;
+        }
+
+        /* --- SLIDER --- */
+        .slider-section {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .hero-slider-wrap {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            aspect-ratio: 16/9;
+            box-shadow: var(--shadow-float);
+            border: 1px solid var(--border);
+        }
+
+        .comparison-slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            cursor: ew-resize;
+        }
+
+        .slider-after,
+        .slider-before {
+            position: absolute;
+            inset: 0;
+        }
+
+        .slider-before {
+            z-index: 2;
+            clip-path: inset(0 50% 0 0);
+        }
+
+        .slider-before img,
+        .slider-after img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: white;
+            z-index: 10;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .slider-handle-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 56px;
+            height: 56px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            color: var(--primary);
+        }
+
+        /* --- PRICING BAR --- */
+        .pricing-bar {
+            background: #FFFFFF;
+            padding: 20px 40px;
+            border-radius: 100px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 30;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-subtle);
+            letter-spacing: -0.02em;
+        }
+
+        .price-opt {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .price-opt .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--rare-green);
+            border-radius: 50%;
+        }
+
+        /* --- EDITORIAL SECTIONS --- */
+        .section-header {
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .tagline {
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--rare-green);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .section-desc {
+            font-size: 20px;
+            color: var(--fg-muted);
+            line-height: 1.6;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        /* --- THE IMPACT SECTION --- */
+        .impact-section {
+            padding: 120px 0;
+            background: var(--bg-soft);
+            border-radius: 48px;
+            margin: 40px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .feature-card {
+            padding: 48px 32px;
+            background: #FFFFFF;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-float);
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+        }
+
+        .feature-card p {
+            color: var(--fg-muted);
+            font-size: 16px;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 32px;
+            display: block;
+            opacity: 0.9;
+        }
+
+        /* --- THE PROCESS --- */
+        .process-section {
+            padding: 140px 0;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .process-item {
+            position: relative;
+            text-align: center;
+        }
+
+        .process-num {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--rare-green);
+            background: var(--rare-green-soft);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 24px;
+        }
+
+        .process-item h4 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .process-item p {
+            color: var(--fg-muted);
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        /* --- PORTFOLIO GALLERY --- */
+        .portfolio-section {
+            padding: 120px 0;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: var(--bg-soft);
+        }
+
+        .portfolio-item.wide {
+            grid-column: span 2;
+            aspect-ratio: 2/1;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.12, 0, 0, 1);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.04);
+        }
+
+        /* --- FAQ SECTION --- */
+        .faq-section {
+            padding: 140px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px 80px;
+        }
+
+        .faq-item h4 {
+            font-size: 19px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .faq-item p {
+            color: var(--fg-muted);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* --- FINAL CTA --- */
+        .cta-section {
+            padding: 120px 40px;
+            background: var(--primary);
+            color: #FFFFFF;
+            text-align: center;
+            border-radius: 64px;
+            margin: 160px auto;
+            max-width: 1000px;
+            width: calc(100% - 40px);
+        }
+
+        .btn-massive {
+            display: inline-block;
+            background: var(--rare-green);
+            color: white;
+            padding: 24px 64px;
+            border-radius: 100px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 40px rgba(5, 150, 105, 0.4);
+        }
+
+        .btn-massive:hover {
+            transform: scale(1.05) translateY(-5px);
+            background: var(--rare-green-vibrant);
+        }
+
+        footer {
+            padding: 80px 0;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--fg-muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* --- STICKY CTA --- */
+        .sticky-cta-wrap {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3000;
+        }
+
+        .btn-sticky {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(12px);
+            color: white;
+            padding: 18px 36px;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-sticky:hover {
+            transform: translateY(-4px);
+            background: #000;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.2, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+
+            .hero-title {
+                margin-bottom: 24px;
+            }
+
+            .hero-subtitle {
+                margin-bottom: 56px;
+            }
+
+            .cta-section {
+                padding: 100px 24px;
+                margin: 80px 20px;
+                width: calc(100% - 40px);
+                border-radius: 40px;
+            }
+
+            .sticky-cta-wrap {
+                bottom: 24px;
+                left: 20px;
+                right: 20px;
+                transform: none;
+            }
+
+            .btn-sticky {
+                width: 100%;
+                justify-content: center;
+                padding: 20px;
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- Hero Section -->
+        <section class="container hero">
+            <div class="logo-static reveal">
+                <a href="index.html">
+                    <div class="logo-box"></div>
+                    RARE RENDER
+                </a>
+            </div>
+            <h1 class="hero-title reveal">World-class<br>digital staging.</h1>
+            <p class="hero-subtitle reveal">Elite architectural design for high-performance marketing. 24-hour
+                turnaround, unlimited revisions, and flawless luxury execution.</p>
+
+            <div class="slider-section reveal">
+                <div class="hero-slider-wrap">
+                    <div class="comparison-slider" id="main-slider">
+                        <div class="slider-after">
+                            <img src="images/media__1770376497078.jpg" alt="After Staging">
+                        </div>
+                        <div class="slider-before">
+                            <img src="images/media__1770376624571.jpg" alt="Before Staging">
+                        </div>
+                        <div class="slider-handle">
+                            <div class="slider-handle-circle">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m18 8 4 4-4 4M6 8l-4 4 4 4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-bar reveal">
+                <div class="price-opt">
+                    <div class="dot"></div>
+                    <span>One Shot: <strong>$39</strong></span>
+                </div>
+                <div class="price-opt">
+                    <div class="dot"></div>
+                    <span>Pack of 5: <strong>$149</strong></span>
+                </div>
+                <div class="price-opt">
+                    <div class="dot"></div>
+                    <span>Volume: <strong style="color: var(--rare-green);">Custom Quote</strong></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section (Hidden) -->
+        <!--
+        <section class="container">
+            <div class="impact-section reveal">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="tagline">The Advantage</span>
+                        <h2 class="section-title">The architecture<br>of a faster sale.</h2>
+                        <p class="section-desc">Empty listings stay on market 70% longer. We solve the emotional gap
+                            between a house and a home with world-class digital design.</p>
+                    </div>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <span class="feature-icon">🚀</span>
+                            <h3>70% Faster</h3>
+                            <p>Staged homes sell up to 70% faster than vacant listings.</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">💰</span>
+                            <h3>5–10% Higher</h3>
+                            <p>Virtual staging can increase buyer offers by up to 10%.</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">🌐</span>
+                            <h3>97% Reach</h3>
+                            <p>97% of buyers start online — empty rooms underperform.</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">📉</span>
+                            <h3>95% Cheaper</h3>
+                            <p>Up to 95% cheaper than physical staging costs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <!-- Process Section -->
+        <section class="container process-section reveal">
+            <div class="section-header">
+                <span class="tagline">Implementation</span>
+                <h2 class="section-title">A seamless workflow.</h2>
+                <p class="section-desc">We’ve removed every piece of friction. No apps, no logins—just results.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-item">
+                    <span class="process-num">1</span>
+                    <h4>Send your photos</h4>
+                    <p>Email us your high-res files or a simple listing link. Our team reviews them immediately.</p>
+                </div>
+                <div class="process-item">
+                    <span class="process-num">2</span>
+                    <h4>Digital Furnishing</h4>
+                    <p>Our architects furnish your vacant rooms with elite design tailored to your property’s
+                        demographic.</p>
+                </div>
+                <div class="process-item">
+                    <span class="process-num">3</span>
+                    <h4>24h Delivery</h4>
+                    <p>Receive your final, high-resolution staged photos. Review, refine, or go straight to market.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section class="container portfolio-section" id="portfolio">
+            <div class="section-header reveal">
+                <span class="tagline">The Portfolio</span>
+                <h2 class="section-title">Visual Evidence.</h2>
+                <p class="section-desc">Recent staging projects for Australia’s most discerning agents.</p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- 1. Airy Living (Wide) -->
+                <div class="portfolio-item wide reveal">
+                    <img src="images/media__1770588607338.jpg" alt="Airy Living">
+                </div>
+                <!-- 2. Global Suite -->
+                <div class="portfolio-item reveal">
+                    <img src="images/media__1770588617467.jpg" alt="Global Suite">
+                </div>
+                <!-- 3. Modern Luxe Living -->
+                <div class="portfolio-item reveal">
+                    <img src="images/media__1770374803570.jpg" alt="Modern Luxe">
+                </div>
+                <!-- 4. Scandi Kitchen -->
+                <div class="portfolio-item reveal">
+                    <img src="images/media__1770374814972.jpg" alt="Scandi Kitchen">
+                </div>
+                <!-- 5. Signature Living -->
+                <div class="portfolio-item reveal">
+                    <img src="images/media__1770374684061.jpg" alt="Signature Living">
+                </div>
+                <!-- 6. Industrial Loft (Wide) -->
+                <div class="portfolio-item wide reveal">
+                    <img src="images/media__1770374741973.jpg" alt="Industrial Loft">
+                </div>
+                <!-- 7. Coastal Master -->
+                <div class="portfolio-item reveal">
+                    <img src="images/media__1770375112283.jpg" alt="Coastal Master">
+                </div>
+                <!-- 8. Refined Office -->
+                <div class="portfolio-item reveal">
+                    <img src="images/media__1770375237364.jpg" alt="Refined Office">
+                </div>
+                <!-- 9. Minimalist Lounge -->
+                <div class="portfolio-item reveal">
+                    <img src="images/media__1770588741586.jpg" alt="Minimalist Lounge">
+                </div>
+                <!-- 10. Cathedral Living (Wide) -->
+                <div class="portfolio-item wide reveal">
+                    <img src="images/media__1770588762654.jpg" alt="Cathedral Living">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container faq-section reveal">
+            <div class="section-header">
+                <span class="tagline">Common Questions</span>
+                <h2 class="section-title">Details & Nuance.</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Is digital staging misleading?</h4>
+                    <p>Not at all. It is a standard marketing tool used to help buyers visualize potential. It follows
+                        the same principle as physical staging, but at a fraction of the cost.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What if I don&apos;t like the furniture?</h4>
+                    <p>Design is subjective. That is why we offer unlimited revisions. We will adjust the style,
+                        placement, and lighting until it matches your vision perfectly.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What is the turnaround time?</h4>
+                    <p>Our standard turnaround is 24 hours. We understand that in real estate, every hour a listing is
+                        offline is a lost opportunity.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do I need professional photos?</h4>
+                    <p>While high-res professional photos yield the best results, we can work with any clear image,
+                        including those shot on modern smartphones.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Will the scale look realistic?</h4>
+                    <p>Yes. Our designers are trained in spatial architecture. Every piece of furniture is rendered with
+                        correct scale to ensure the room looks exactly as it would in reality.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How do I handle payment?</h4>
+                    <p>We send a direct invoice upon delivery. You only pay once you are 100% satisfied with the
+                        outcome.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="cta-section container reveal">
+            <h2 class="cta-title">Ready to launch?</h2>
+            <p
+                style="font-size: 20px; opacity: 0.8; margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Attach your photos to a new email and we'll handle the rest.</p>
+            <a href="mailto:hello@rarerender.com?subject=New Virtual Staging Project&body=Hi Rare Render team,%0D%0A%0D%0AI would like to start a new virtual staging project.%0D%0A%0D%0AAddress:%20%0D%0AQuantity:%20%0D%0ADeadline:%2024%20Hours%0D%0A%0D%0AI have attached the photos / listing link below.%0D%0A%0D%0AThank you!"
+                class="btn-massive">Email Your Photos
+                Now</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 RARE RENDER. EXCEPTIONAL QUALITY / 24H DELIVERY.</p>
+        </div>
+    </footer>
+
+    <div class="sticky-cta-wrap">
+        <div class="reveal" style="transition-delay: 1s;">
+            <a href="mailto:hello@rarerender.com?subject=New Virtual Staging Project&body=Hi Rare Render team,%0D%0A%0D%0AI would like to start a new virtual staging project.%0D%0A%0D%0AAddress:%20%0D%0AQuantity:%20%0D%0ADeadline:%2024%20Hours%0D%0A%0D%0AI have attached the photos / listing link below.%0D%0A%0D%0AThank you!"
+                class="btn-sticky">
+                Start Order
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14m-7-7 7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const initReveal = () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        };
+
+        const initSlider = () => {
+            const slider = document.getElementById('main-slider');
+            if (!slider) return;
+            const before = slider.querySelector('.slider-before');
+            const handle = slider.querySelector('.slider-handle');
+
+            const update = (percent) => {
+                if (percent < 0) percent = 0; if (percent > 100) percent = 100;
+                before.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+                handle.style.left = `${percent}%`;
+            };
+
+            const onMove = (e) => {
+                const rect = slider.getBoundingClientRect();
+                const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+                if (clientX === undefined) return;
+                const x = clientX - rect.left;
+                update((x / rect.width) * 100);
+            };
+
+            slider.addEventListener('mousemove', onMove);
+            slider.addEventListener('touchmove', (e) => {
+                onMove(e);
+                e.preventDefault();
+            }, { passive: false });
+
+            update(50);
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initReveal();
+            initSlider();
+        });
+    </script>
+</body>
+
+</html>
