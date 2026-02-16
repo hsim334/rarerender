@@ -1,0 +1,273 @@
+/* 
+   motion.css - THE PREMIUM PRODUCT STANDARD (Brief V3)
+   Aesthetic: Established, Professional, Calm, High-End.
+   Typography: Playfair Display + Inter.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --bg: #ffffff;
+    --ink: #111111;
+    --ash: #666666;
+    --border: #f0f0f0;
+    --accent: #000000;
+
+    /* Perfect Architectural Spacing */
+    --gap-xl: 160px;
+    --gap-lg: 100px;
+    --gap-md: 60px;
+    --gap-sm: 32px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* --- Typography --- */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #000;
+}
+
+h1 {
+    font-size: clamp(48px, 6vw, 72px);
+    margin-bottom: var(--gap-sm);
+}
+
+h2 {
+    font-size: clamp(32px, 5vw, 42px);
+    margin-bottom: var(--gap-md);
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: var(--gap-sm);
+}
+
+.label-caps {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--ash);
+    margin-bottom: var(--gap-sm);
+}
+
+.lead {
+    font-size: clamp(18px, 2.5vw, 22px);
+    font-weight: 500;
+    color: var(--ash);
+    max-width: 720px;
+}
+
+/* --- Layout Sections --- */
+
+section {
+    padding: var(--gap-xl) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero {
+    padding: 120px 0 var(--gap-xl);
+    text-align: left;
+}
+
+/* --- Grids & Components --- */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.val-list {
+    list-style: none;
+}
+
+.val-list li {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-left: 32px;
+    position: relative;
+    color: var(--ink);
+}
+
+.val-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #000;
+    font-weight: 900;
+}
+
+/* --- Pricing Box --- */
+
+.pricing-card {
+    background: #fbfbfb;
+    border: 1px solid var(--border);
+    padding: 60px;
+    text-align: center;
+}
+
+.price-box {
+    margin: 40px 0;
+}
+
+.price-main {
+    font-size: 64px;
+    font-weight: 950;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.05em;
+}
+
+.price-sub {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--ash);
+    letter-spacing: 0.1em;
+}
+
+.btn-trial {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 24px 64px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: transform 0.2s;
+}
+
+.btn-trial:hover {
+    transform: translateY(-4px);
+}
+
+/* --- Video Container --- */
+
+.video-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    margin-bottom: 40px;
+}
+
+/* --- Authenticity Section --- */
+
+.auth-box {
+    background: #000;
+    color: #fff;
+    padding: 80px;
+}
+
+.auth-box h2 {
+    color: #fff;
+}
+
+.auth-box .label-caps {
+    color: #555;
+}
+
+.auth-box .val-list li {
+    color: #fff;
+}
+
+.auth-box .val-list li::before {
+    color: #fff;
+}
+
+/* --- Steps --- */
+
+.step {
+    border-left: 4px solid #000;
+    padding-left: 32px;
+}
+
+.step-num {
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* --- Footer --- */
+
+footer {
+    padding: 120px 0;
+    background: #fff;
+    text-align: center;
+}
+
+/* --- Utils --- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .container {
+        padding: 0 32px;
+    }
+
+    .auth-box {
+        padding: 40px;
+    }
+}
