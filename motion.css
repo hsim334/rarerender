@@ -143,22 +143,86 @@ section {
     font-weight: 900;
 }
 
-/* Light Utility for Dark Backgrounds */
-.val-list-light li {
-    color: #ffffff !important;
+.comp-list {
+    list-style: none;
+    margin-top: 20px;
 }
 
-.val-list-light li::before {
-    color: #ffffff !important;
+.comp-list li {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    padding-left: 36px;
+    position: relative;
+    color: var(--ink);
+    line-height: 1.4;
 }
 
-/* --- Pricing Box --- */
+.comp-list.traditional li {
+    color: #888;
+}
+
+.comp-list.traditional li::before {
+    content: "✕";
+    position: absolute;
+    left: 0;
+    color: #aaa;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.comp-list.rarerender li {
+    color: #fff;
+}
+
+.comp-list.rarerender li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+/* --- Components & Blocks --- */
+
+.comp-card {
+    padding: 60px 40px;
+    border-radius: 16px;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.comp-card.traditional {
+    background: #fbfbfb;
+    border: 1px solid var(--border);
+}
+
+.comp-card.rarerender {
+    background: linear-gradient(135deg, #1a1a1a, #000);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.comp-card.rarerender::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #333, #fff);
+}
 
 .pricing-card {
     background: #fbfbfb;
     border: 1px solid var(--border);
+    border-radius: 16px;
     padding: 60px;
     text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
 }
 
 .price-box {
@@ -185,16 +249,38 @@ section {
     background: #000;
     color: #fff;
     padding: 24px 64px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: 800;
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    transition: transform 0.2s;
+    transition: opacity 0.2s, transform 0.2s;
+    border: none;
 }
 
 .btn-trial:hover {
     transform: translateY(-4px);
+    opacity: 0.9;
+}
+
+.btn-outline {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 24px 48px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
 }
 
 /* --- Video Container --- */
@@ -204,6 +290,9 @@ section {
     aspect-ratio: 16 / 9;
     background: #000;
     margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 /* --- Authenticity Section --- */
@@ -212,6 +301,21 @@ section {
     background: #000;
     color: #fff;
     padding: 80px;
+    border-radius: 16px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+}
+
+.cta-banner {
+    background: linear-gradient(145deg, #111, #000);
+    border: 1px solid #222;
+    border-radius: 24px;
+    padding: 100px 60px;
+    text-align: center;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.cta-banner h2 {
+    color: #fff;
 }
 
 .auth-box h2 {
