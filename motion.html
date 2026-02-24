@@ -19,18 +19,17 @@
 <body>
 
     <!-- BRANDBAR -->
-    <nav style="padding: 40px 0; border-bottom: 1px solid var(--border);">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: baseline;">
-            <a href="index.html"
+    <nav class="site-nav" style="padding: 24px 0; border-bottom: 1px solid var(--border);">
+        <div class="container nav-inner" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="nav-brand"
                 style="font-weight: 950; font-size: 20px; letter-spacing: -0.05em; text-transform: uppercase; text-decoration: none; color: #000;">RARE
                 RENDER</a>
-            <div style="font-size: 13px; font-weight: 600; color: var(--ash);">
-                We turn listing photos into cinematic promo videos, no filming required.
-            </div>
+            <a href="#trial" style="background: #000; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; transition: opacity 0.2s;">Start $79 Trial</a>
         </div>
     </nav>
 
     <main>
+
 
         <!-- HERO -->
         <section class="hero container reveal">
@@ -42,10 +41,8 @@
                     <p class="lead hero-lead">Premium property videos built entirely from your existing photography.
                         Delivered in 48 hours.</p>
                     <div class="hero-cta-wrap">
-                        <a href="mailto:hello@rarerender.com?subject=Get Examples + Pricing" class="btn-trial">Get
-                            Examples + Pricing</a>
-                        <p class="note-sub" style="margin-top: 16px; font-weight: 600; color: #ff3333;">* Limited
-                            production capacity this week</p>
+                        <a href="#trial" class="btn-trial">Start $79 Trial</a>
+                        <p class="note-sub" style="margin-top: 16px; font-weight: 600; color: #555;">* Priority 48-hour delivery included</p>
                     </div>
                 </div>
                 <div class="hero-media">
@@ -59,6 +56,36 @@
                                     style="position:absolute;top:0;left:0;width:100%;height:100%;"
                                     title="Kitchen & Living Evidence"></iframe></div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISUALS / PORTFOLIO -->
+        <section class="container reveal">
+            <span class="label-caps">Examples</span>
+            <h2 style="margin-bottom: 40px;">Visually Premium Presentation</h2>
+
+            <div class="video-stack">
+                <div class="video-item" style="margin-bottom: 40px;">
+                    <div class="video-wrap">
+                        <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+                                src="https://player.vimeo.com/video/1165253056?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                title="Master Suite Evidence"></iframe></div>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-wrap">
+                        <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+                                src="https://player.vimeo.com/video/1165254977?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                title="Exterior & Architecture Evidence"></iframe></div>
                     </div>
                 </div>
             </div>
@@ -90,36 +117,6 @@
                             100% your real listing, elevated but not altered.
                         </li>
                     </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- VISUALS / PORTFOLIO -->
-        <section class="container reveal">
-            <span class="label-caps">Examples</span>
-            <h2 style="margin-bottom: 40px;">Visually Premium Presentation</h2>
-
-            <div class="video-stack">
-                <div class="video-item" style="margin-bottom: 40px;">
-                    <div class="video-wrap">
-                        <div style="padding:56.25% 0 0 0;position:relative;"><iframe
-                                src="https://player.vimeo.com/video/1165253056?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                                frameborder="0"
-                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                title="Master Suite Evidence"></iframe></div>
-                    </div>
-                </div>
-
-                <div class="video-item">
-                    <div class="video-wrap">
-                        <div style="padding:56.25% 0 0 0;position:relative;"><iframe
-                                src="https://player.vimeo.com/video/1165254977?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                                frameborder="0"
-                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                title="Exterior & Architecture Evidence"></iframe></div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -162,26 +159,53 @@
             </div>
         </section>
 
-        <!-- PROPERTY TYPES -->
-        <section class="container reveal text-center">
-            <span class="label-caps">Versatility</span>
-            <h2>Property Types Covered</h2>
-            <div class="grid-2"
-                style="margin-top: 30px; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <!-- WHY AGENTS USE IT -->
+        <section class="container reveal">
+            <div class="grid-2">
+                <div>
+                    <span class="label-caps">Strategic Value</span>
+                    <h2>Why Agents Use It</h2>
+                </div>
                 <ul class="val-list">
-                    <li>Residential Listings</li>
-                    <li>Modern Apartments</li>
-                    <li>Suburban Townhouses</li>
-                </ul>
-                <ul class="val-list">
-                    <li>Prestige Luxury Estates</li>
-                    <li>Commercial Real Estate</li>
+                    <li><strong>Secure More Listings</strong>: Win appraisals by including professional video as a
+                        standard offering at no cost to your agency.</li>
+                    <li><strong>Maximize Engagement</strong>: Property videos on realestate.com.au generate
+                        significantly higher engagement than static photos.</li>
+                    <li><strong>Move Faster</strong>: Launch campaigns with video in 48 hours. No film crew schedules to
+                        work around.</li>
+                    <li><strong>Cut Vendor Costs</strong>: Provide a premium video experience for roughly 75% less than
+                        traditional production.</li>
+                    <li><strong>Consistency at Scale</strong>: Get a high-end, repeatable look for every listing, from
+                        apartments to prestige luxury estates.</li>
                 </ul>
             </div>
         </section>
 
+        <!-- ORDER PATHWAY -->
+        <section class="container reveal">
+            <span class="label-caps">The Process</span>
+            <h2 style="margin-bottom: 40px;">The Pathway to Delivery</h2>
+            <div class="grid-3">
+                <div class="step">
+                    <span class="step-num">Step 01</span>
+                    <h3>Email photos and property details</h3>
+                    <p class="note-sub">Send assets to hello@rarerender.com</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">Step 02</span>
+                    <h3>Production of cinematic video</h3>
+                    <p class="note-sub">Usually delivered in 24–48 hours.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">Step 03</span>
+                    <h3>Finished video is delivered</h3>
+                    <p class="note-sub">A download link sent to your inbox.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- PRICING -->
-        <section class="container reveal" id="pricing">
+        <section class="container reveal" id="trial">
             <span class="label-caps">The Investment</span>
             <h2>No Subscriptions. Order Per Listing.</h2>
 
@@ -271,47 +295,20 @@
             </div>
         </section>
 
-        <!-- ORDER PATHWAY -->
-        <section class="container reveal">
-            <span class="label-caps">The Process</span>
-            <h2 style="margin-bottom: 40px;">The Pathway to Delivery</h2>
-            <div class="grid-3">
-                <div class="step">
-                    <span class="step-num">Step 01</span>
-                    <h3>Email photos and property details</h3>
-                    <p class="note-sub">Send assets to hello@rarerender.com</p>
-                </div>
-                <div class="step">
-                    <span class="step-num">Step 02</span>
-                    <h3>Production of cinematic video</h3>
-                    <p class="note-sub">Usually delivered in 24–48 hours.</p>
-                </div>
-                <div class="step">
-                    <span class="step-num">Step 03</span>
-                    <h3>Finished video is delivered</h3>
-                    <p class="note-sub">A download link sent to your inbox.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- WHY AGENTS USE IT -->
-        <section class="container reveal">
-            <div class="grid-2">
-                <div>
-                    <span class="label-caps">Strategic Value</span>
-                    <h2>Why Agents Use It</h2>
-                </div>
+        <!-- PROPERTY TYPES -->
+        <section class="container reveal text-center">
+            <span class="label-caps">Versatility</span>
+            <h2>Property Types Covered</h2>
+            <div class="grid-2"
+                style="margin-top: 30px; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
                 <ul class="val-list">
-                    <li><strong>Secure More Listings</strong>: Win appraisals by including professional video as a
-                        standard offering at no cost to your agency.</li>
-                    <li><strong>Maximize Engagement</strong>: Property videos on realestate.com.au generate
-                        significantly higher engagement than static photos.</li>
-                    <li><strong>Move Faster</strong>: Launch campaigns with video in 48 hours. No film crew schedules to
-                        work around.</li>
-                    <li><strong>Cut Vendor Costs</strong>: Provide a premium video experience for roughly 75% less than
-                        traditional production.</li>
-                    <li><strong>Consistency at Scale</strong>: Get a high-end, repeatable look for every listing, from
-                        apartments to prestige luxury estates.</li>
+                    <li>Residential Listings</li>
+                    <li>Modern Apartments</li>
+                    <li>Suburban Townhouses</li>
+                </ul>
+                <ul class="val-list">
+                    <li>Prestige Luxury Estates</li>
+                    <li>Commercial Real Estate</li>
                 </ul>
             </div>
         </section>
@@ -358,7 +355,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <!-- CLOSING CTA -->
