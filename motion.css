@@ -107,6 +107,19 @@ section {
     text-align: left;
 }
 
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.hero-lead {
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+
+
 /* --- Grids & Components --- */
 
 .grid-2 {
@@ -405,11 +418,129 @@ footer {
         gap: 40px;
     }
 
-    .container {
-        padding: 0 32px;
+    .container,
+    .container-narrow {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 42px !important;
+    }
+
+    h2 {
+        font-size: 32px !important;
+    }
+
+    /* --- Brandbar Mobile --- */
+    .site-nav {
+        padding: 20px 0 !important;
+    }
+
+    .nav-inner {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .nav-tagline {
+        font-size: 11px !important;
+        line-height: 1.4;
+    }
+
+    /* --- Hero Mobile Adjustments (Video Above Fold) --- */
+    .hero {
+        padding-top: 24px;
+        padding-bottom: 40px;
+    }
+
+    .hero-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .hero-content {
+        display: contents;
+        /* Unbox for reordering */
+    }
+
+    .hero-content>.label-caps {
+        order: 1;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 12px;
+    }
+
+    .hero-content>.hero-title {
+        order: 2;
+        text-align: center;
+        font-size: 40px !important;
+        line-height: 1.15;
+        margin-bottom: 24px;
+    }
+
+    .hero-media {
+        order: 3;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .hero-content>.hero-lead {
+        order: 4;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 32px;
+        padding: 0 4px;
+    }
+
+    .hero-content>.hero-cta-wrap {
+        order: 5;
+        text-align: center;
+    }
+
+    .hero-cta-wrap .btn-trial {
+        width: 100%;
+        padding: 20px 0;
+        font-size: 16px;
+    }
+
+    .btn-trial,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 16px;
     }
 
     .auth-box {
-        padding: 40px;
+        padding: 40px 24px;
+    }
+
+    .comp-card {
+        padding: 40px 24px !important;
+    }
+
+    .comp-card.rarerender {
+        transform: none !important;
+    }
+
+    .cta-banner {
+        padding: 60px 24px;
+        border-radius: 16px;
+    }
+
+    .price-main {
+        font-size: 48px;
     }
 }
