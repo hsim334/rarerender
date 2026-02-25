@@ -1,6 +1,6 @@
 /* 
-   motion.css - THE PREMIUM PRODUCT STANDARD (Brief V3)
-   Aesthetic: Established, Professional, Calm, High-End.
+   motion.css - THE PREMIUM PRODUCT STANDARD (Brief V3 tweaked for Cold Traffic)
+   Aesthetic: Fast, Sharp, Direct.
    Typography: Playfair Display + Inter.
 */
 
@@ -9,15 +9,15 @@
 :root {
     --bg: #ffffff;
     --ink: #111111;
-    --ash: #666666;
-    --border: #f0f0f0;
+    --ash: #555555;
+    --border: #eeeeee;
     --accent: #000000;
 
-    /* Standard Spacing (Halved) */
-    --gap-xl: 80px;
-    --gap-lg: 50px;
-    --gap-md: 30px;
-    --gap-sm: 16px;
+    /* Reduced Spacing */
+    --gap-xl: 40px;
+    --gap-lg: 30px;
+    --gap-md: 20px;
+    --gap-sm: 12px;
 }
 
 * {
@@ -31,19 +31,12 @@ body {
     background-color: var(--bg);
     color: var(--ink);
     font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    letter-spacing: -0.01em;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
 }
 
 .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
-.container-narrow {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px;
@@ -55,84 +48,88 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    /* Shift to more Inter for less poetic feel, though Playfair can stay on some if wanted. Prompt says blunt and specific. I will just stick to Inter for sharper direct feel */
+    font-weight: 800;
     line-height: 1.1;
     color: #000;
+    letter-spacing: -0.03em;
 }
 
 h1 {
-    font-size: clamp(48px, 6vw, 72px);
+    font-size: clamp(36px, 5vw, 54px);
     margin-bottom: var(--gap-sm);
 }
 
 h2 {
-    font-size: clamp(32px, 5vw, 42px);
+    font-size: clamp(28px, 4vw, 36px);
     margin-bottom: var(--gap-md);
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: var(--gap-sm);
 }
 
 .label-caps {
-    display: block;
+    display: inline-block;
     font-family: 'Inter', sans-serif;
     font-size: 11px;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     color: var(--ash);
     margin-bottom: var(--gap-sm);
+    background: #f1f1f1;
+    padding: 6px 12px;
+    border-radius: 4px;
 }
 
 .lead {
-    font-size: clamp(18px, 2.5vw, 22px);
+    font-size: clamp(16px, 2vw, 20px);
     font-weight: 500;
     color: var(--ash);
-    max-width: 720px;
+    max-width: 600px;
 }
 
 /* --- Layout Sections --- */
 
 section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     border-bottom: 1px solid var(--border);
 }
 
 .hero {
-    padding: 80px 0 100px;
+    padding: 40px 0 60px;
     text-align: left;
 }
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
     align-items: center;
 }
 
 .hero-lead {
-    margin-top: 24px;
-    margin-bottom: 40px;
+    margin-top: 16px;
+    margin-bottom: 24px;
 }
-
 
 /* --- Grids & Components --- */
 
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 40px;
     align-items: start;
 }
 
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 20px;
 }
 
 .val-list {
@@ -140,16 +137,16 @@ section {
 }
 
 .val-list li {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
-    margin-bottom: 20px;
-    padding-left: 32px;
+    margin-bottom: 16px;
+    padding-left: 28px;
     position: relative;
     color: var(--ink);
 }
 
 .val-list li::before {
-    content: "•";
+    content: "→";
     position: absolute;
     left: 0;
     color: #000;
@@ -543,4 +540,12 @@ footer {
     .price-main {
         font-size: 48px;
     }
+}
+/* --- Trust Card --- */
+.trust-card {
+    background: #f8f8f8;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--border);
 }
